@@ -6,24 +6,47 @@
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+body {
+  background-image: url("/bg.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;  
+}
+
 main {
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(to right, blue, red);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: rgb(75, 0, 130, 0.8);
+  border-radius: 3%;
+  scale: 0.5;
+  padding: 3rem;
 }
 
 main h1 {
   color: white;
   font-weight: bold;
+  scale: 2;
+  font-size: 2vw;
+  top: -7rem;
+}
+
+.form {
+  width: 50%;
+  height: 7vh; 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  scale: 2;
 }
 
 .inp {
-  width: 40%;
-  height: 5vh;
+  width: 75%;
+  height: 100%;
   padding: 0.5rem;
   border: none;
   border-radius: 0.2rem;
@@ -36,16 +59,53 @@ main h1 {
 }
 
 .button {
-  width: 15rem;
-  height: 4vh;
+  width: 20%;
+  height: 100%;
   background-color: rgb(68, 68, 207);
   outline: none;
   border: none;
   border-radius: 0.1rem;
   color: white;
   font-weight: bold;
+  font-size: 1vw;
 }
 
 .button:hover {
   background-color: rgb(68, 68, 207, 0.9);
+}
+
+.msg {
+  font-weight: bold;
+  font-size: 3vw;
+  font-style: italic;
+  bottom: -5rem;
+}
+
+.loading {
+  color: lightskyblue;
+}
+
+.loaded {
+  color: lightgreen;
+}
+
+.error {
+  color: red;
+}
+
+@media only screen and (max-width: 600px) {
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+  }
+  .inp {
+    width: 100%;
+  }
+  .button {
+    width: 100%;
+    height: 20vh;
+  }
 }

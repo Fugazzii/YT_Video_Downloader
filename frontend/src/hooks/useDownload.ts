@@ -29,5 +29,11 @@ export default function useDownload({ url, id }: Props) {
         }
     }
 
-    return { downloaded, downloading, error, handle_download };
+    function reset() {
+        setDownloaded(false);
+        setDownloading(false);
+        setError(null);
+    }
+
+    return { downloaded, downloading, error, handle_download, reset };
 }
